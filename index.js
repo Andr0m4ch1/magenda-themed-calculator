@@ -17,7 +17,7 @@ function calculate(){
 }
 function handleKeyPress(event){
     const key = event.key;
-    if((key >= '0' && key <= '9') || ['+', '-', '*', '/'].includes(key)){
+    if((key >= '0' && key <= '9') || ['+', '-', '*', '/', '.'].includes(key)){
         appendToDisplay(key);
     } else if(key === 'Enter'){
         calculate();
