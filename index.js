@@ -15,3 +15,15 @@ function calculate(){
         display.value = 'Error';
     }
 }
+function handleKeyPress(event){
+    const key = event.key;
+    if((key >= '0' && key <= '9') || ['+', '-', '*', '/'].includes(key)){
+        appendToDisplay(key);
+    } else if(key === 'Enter'){
+        calculate();
+    } else if(key === 'Backspace'){
+        display.value = display.value.slice(0, -1);
+    } else if(key === 'Escape'){
+        clearDisplay();
+    }
+}
